@@ -1,6 +1,13 @@
 # Python Code Generator AI
 
-A custom-built AI model that generates Python code from natural language descriptions, without relying on pre-trained models or external APIs.
+A custom-built AI model that generates Python code from natural language descriptions, using transformer architecture.
+
+## Status
+
+⚠️ **Note: This model needs to be trained before use**
+- The architecture and pipeline are implemented
+- Training code is ready
+- Requires training on code dataset before generating code
 
 ## Features
 
@@ -9,29 +16,34 @@ A custom-built AI model that generates Python code from natural language descrip
 - Built-in tokenizer for Python code
 - Code completion suggestions
 - Error detection and correction
+- Data augmentation
+- Performance metrics tracking
 
 ## Project Structure
 
 ```
-my_code_generator_ai/
+pythoncodegenerator/
 ├── data/
 │   ├── raw_data/            # Store your Python code dataset here
-│   └── processed_data/      # Preprocessed and tokenized data
+│   └── test/                # Test data and examples
 ├── model/
 │   ├── transformer.py       # Custom transformer implementation
 │   ├── train.py            # Training script
 │   └── inference.py        # Code generation script
-├── scripts/
-│   └── preprocess_data.py  # Data preprocessing script
-└── requirements.txt        # Project dependencies
+├── utils/
+│   ├── augmentation.py     # Data augmentation utilities
+│   └── metrics.py          # Performance metrics
+├── error_resolution/       # Error handling system
+├── examples/              # Example code and usage
+└── requirements.txt       # Project dependencies
 ```
 
 ## Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/python-code-generator-ai.git
-cd python-code-generator-ai
+git clone https://github.com/Singh-Codes/pyhtoncodegenerator.git
+cd pyhtoncodegenerator
 ```
 
 2. Create a virtual environment:
@@ -46,48 +58,36 @@ venv\Scripts\activate     # Windows
 pip install -r requirements.txt
 ```
 
-## Usage
+## Training
 
-1. Prepare your dataset:
-   - Place your Python code files in `data/raw_data/`
-   - Run the preprocessing script:
-   ```bash
-   python scripts/preprocess_data.py
-   ```
-
-2. Train the model:
+1. Local Training:
 ```bash
-python model/train.py
+python train.py
 ```
 
-3. Generate code:
+2. Google Colab Training (Recommended):
+- Upload project to Google Drive
+- Open and run training notebook
+- Use GPU runtime for faster training
+
+## Usage (After Training)
+
 ```python
 from model.inference import CodeGenerator
 
-generator = CodeGenerator(
-    model_path='checkpoints/best_model.pt',
-    tokenizer_path='data/processed_data/code_tokenizer.json'
-)
-
-prompt = "Write a function to calculate the factorial of a number"
+generator = CodeGenerator(model_path='checkpoints/best_model.pt')
+prompt = "Write a Python function to calculate factorial"
 code = generator.generate_code(prompt)
 print(code)
 ```
 
 ## Model Architecture
 
-The code generator uses a custom transformer architecture with:
-- Separate encoder and decoder stacks
-- Multi-head attention mechanism
-- Positional encoding
-- Custom tokenizer trained on Python code
-
-## Training Data
-
-The model requires a dataset of Python code files with:
-- Function definitions with docstrings
-- Class definitions with docstrings
-- Clean, well-documented code following PEP 8 guidelines
+- Transformer-based architecture with:
+  - Multi-head attention
+  - Positional encoding
+  - Custom tokenizer
+  - GPU support
 
 ## Contributing
 
@@ -99,4 +99,8 @@ The model requires a dataset of Python code files with:
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+MIT License
+
+## Author
+
+Singh-Codes
