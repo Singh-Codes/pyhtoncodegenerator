@@ -1,0 +1,22 @@
+[
+  {
+    "input": "Create a function to add two numbers",
+    "output": "def add_numbers(a, b):\n    return a + b"
+  },
+  {
+    "input": "Write a function to check if string is palindrome",
+    "output": "def is_palindrome(s):\n    return s == s[::-1]"
+  },
+  {
+    "input": "Create a function to find maximum in a list",
+    "output": "def find_max(lst):\n    return max(lst)"
+  },
+  {
+    "input": "Write a function to calculate factorial",
+    "output": "def factorial(n):\n    return 1 if n <= 1 else n * factorial(n-1)"
+  },
+  {
+    "input": "Create a function to reverse a string",
+    "output": "def reverse_string(s):\n    return s[::-1]"
+  }
+]

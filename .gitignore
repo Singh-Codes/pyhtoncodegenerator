@@ -1,0 +1,16 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.log
+checkpoints/
+*.zip
+.ipynb_checkpoints/
+.DS_Store
+.env
+.idea/
+.vscode/
+*.swp
+*.swo

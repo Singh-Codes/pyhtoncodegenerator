@@ -1,0 +1,38 @@
+Python Code Generator AI - Project Documentation
+Last Updated: 2025-01-14 11:19:11
+
+1. Project Overview
+------------------
+A custom AI-powered Python code generator that creates code from natural language descriptions.
+Built using a transformer-based architecture without relying on pre-trained models.
+
+2. Current Status
+----------------
+Components Implementation Status:
+
+model/transformer.py:
+[+] Positional encoding
+[+] Transformer architecture
+
+model/train.py:
+[+] Training loop
+[+] Validation process
+[+] Model checkpointing
+
+model/inference.py:
+[+] Code generation
+[+] Code cleanup
+
+scripts/preprocess_data.py:
+[+] Tokenizer training
+[+] File processing
+[+] Docstring extraction
+
+3. Recent Changes
+----------------
+
+
+4. Known Issues
+--------------
+- PyTorch installation pending
+- Initial model training pending
